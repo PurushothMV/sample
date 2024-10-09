@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home List</title>
+</head>
+<body>
+<div>
+    <h1>Home List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="homes : ${home}">
+                <td th:text="${homes.id}"></td>
+                <td th:text="${homes.name}"></td>
+                <td th:text="${homes.description}"></td>
+                <td th:text="${homes.price}"></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Form</title>
+</head>
+<body>
+	<div>
+	    <h1>Home Form</h1>
+	    <form th:action="@{/home/save}" post="method">
+	        <lable for="name">Name</lable>
+	        <input type="text" th:name="name" th:value="${homes.name}" required>
+	        <lable for="description">Description</lable>
+	        <input type="text" th:name="description" th:value="${homes.description}" required>
+	        <lable for="price">Price</lable>
+	        <input type="text" th:name="price" th:value="${homes.price}" required>
+	        <button type="submit>Submit</button>
+	    </form>
+	</div>
+</body>
+</html>
